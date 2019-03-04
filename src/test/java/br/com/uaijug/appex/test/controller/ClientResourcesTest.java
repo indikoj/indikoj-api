@@ -1,4 +1,4 @@
-/*package br.com.uaijug.appex.test.controller;
+/*package br.com.uaijug.indikoj.test.controller;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import br.com.uaijug.appex.appex.model.domain.Client;
-import br.com.uaijug.appex.appex.model.domain.ClientType;
-import br.com.uaijug.appex.appex.model.service.ClientService;
-import br.com.uaijug.appex.appex.web.resources.ClientResources;
+import br.com.uaijug.indikoj.model.domain.Client;
+import br.com.uaijug.indikoj.model.domain.ClientType;
+import br.com.uaijug.indikoj.model.service.ClientService;
+import br.com.uaijug.indikoj.web.resources.ClientResources;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ClientResources.class)

@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.uaijug.appex</groupId>
-	<artifactId>appex</artifactId>
+	<groupId>br.com.uaijug.indikoj</groupId>
+	<artifactId>indikoj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>appex</name>
-	<description>Demo project for Spring Boot</description>
+	<name>indikoj</name>
+	<description>Jobs Indicator</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,7 +24,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<codahale-metrics.version>3.0.2</codahale-metrics.version>
-		<docker.image.prefix>appex-api</docker.image.prefix>
+		<docker.image.prefix>indikoj-api</docker.image.prefix>
 	</properties>
 
 	<dependencies>
@@ -185,6 +185,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 	</dependencies>
 

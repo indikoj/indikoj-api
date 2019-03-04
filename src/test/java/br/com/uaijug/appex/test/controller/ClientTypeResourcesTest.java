@@ -1,4 +1,4 @@
-/*package br.com.uaijug.appex.test.controller;
+/*package br.com.uaijug.indikoj.test.controller;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.mockito.Mockito.when;
@@ -23,14 +23,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import br.com.uaijug.appex.appex.AppexApplication;
-import br.com.uaijug.appex.appex.model.domain.ClientType;
-import br.com.uaijug.appex.appex.model.service.ClientTypeService;
-import br.com.uaijug.appex.appex.web.resources.ClientTypeResources;
+import br.com.uaijug.indikoj.IndikojApplication;
+import br.com.uaijug.indikoj.model.domain.ClientType;
+import br.com.uaijug.indikoj.model.service.ClientTypeService;
+import br.com.uaijug.indikoj.web.resources.ClientTypeResources;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ClientTypeResources.class)
-@ContextConfiguration(classes = { AppexApplication.class })
+@ContextConfiguration(classes = { IndikojApplication.class })
 public class ClientTypeResourcesTest {
 
 	@Autowired
