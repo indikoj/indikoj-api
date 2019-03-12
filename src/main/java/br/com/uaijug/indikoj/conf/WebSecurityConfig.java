@@ -33,7 +33,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/configuration/security",
             "/swagger-ui.html",
             "/webjars/**",
-            "/auth"
+            "/auth",
+            "/company-types",
+            "/companys"
+            
         /*    ,
             "/aplicacoes/**",
             "/job/**"*/
