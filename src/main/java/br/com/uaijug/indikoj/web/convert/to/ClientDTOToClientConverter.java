@@ -20,11 +20,11 @@ public class ClientDTOToClientConverter implements Converter<CompanyDTO, Company
 		target.setEmail(source.getEmail());
 		target.setAddress(source.getAddress());
 
-		if (source.getCompanyType() != null) {
-			CompanyTypeDTO dto = new CompanyTypeDTO();
-			dto.setId(source.getCompanyType().getId());
-			dto.setName(source.getCompanyType().getName());
-			target.setCompanyType(convert(dto));
+		if (source.getCompanyTypeId() != null) {
+		//	CompanyTypeDTO dto = new CompanyTypeDTO();
+		//	dto.setId(source.getCompanyType().getId());
+		//	dto.setName(source.getCompanyType().getName());
+		//	target.setCompanyType(convert(dto));
 		}
 
 		target.setPersonType(source.getPersonType());
@@ -37,6 +37,7 @@ public class ClientDTOToClientConverter implements Converter<CompanyDTO, Company
 		return target;
 	}
 
+	@SuppressWarnings("unused")
 	private CompanyType convert(CompanyTypeDTO dto) {
 		CompanyType companyType = new CompanyType();
 		companyType.setId(dto.getId());

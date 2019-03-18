@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotNull;
 
-import br.com.uaijug.indikoj.model.domain.DocumentRegion;
-import br.com.uaijug.indikoj.model.domain.PersonType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -43,7 +41,7 @@ public class CompanyFormDTO implements Serializable {
 
 	@Getter
 	@Setter
-	private PersonType personType;
+	private String personType;
 
 	@Getter
 	@Setter
@@ -56,7 +54,7 @@ public class CompanyFormDTO implements Serializable {
 
 	@Getter
 	@Setter
-	private DocumentRegion documentRegion;
+	private String documentRegion;
 
 	@Getter
 	@Setter

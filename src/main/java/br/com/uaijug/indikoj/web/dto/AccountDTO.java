@@ -1,5 +1,7 @@
 package br.com.uaijug.indikoj.web.dto;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,13 +16,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Data public class CandidateDTO {
-
-	@Getter @Setter private Long id;
-	@Getter @Setter private String name;
+@Data
+public class AccountDTO implements Serializable {
+	private static final long serialVersionUID = -5623786798388768855L;
+	
 	@Getter @Setter private String email;
-	@Getter @Setter private String mobile;
-	@Getter @Setter private String shortCompetences;
-	@Getter @Setter private String curriculum;
-	@Getter @Setter private Long companyId;
+	@Getter @Setter private String password;
+	@Getter
+	@Setter
+	private String userType;
 }

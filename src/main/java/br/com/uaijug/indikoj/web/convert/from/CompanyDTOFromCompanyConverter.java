@@ -20,6 +20,7 @@ public class CompanyDTOFromCompanyConverter implements Converter<Company, Compan
 		target.setName(source.getName());
 		target.setEmail(source.getEmail());
 		target.setAddress(source.getAddress());
+		target.setCompanyTypeId(source.getCompanyType().getId());
 		//ClientType clienteType = service.convert(source.getClientType(), ClientType.class);
 		//target.setClientType(clienteType);
 		target.setPersonType(source.getPersonType());

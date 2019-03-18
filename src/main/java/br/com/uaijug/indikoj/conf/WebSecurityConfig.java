@@ -34,15 +34,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/swagger-ui.html",
             "/webjars/**",
             "/auth",
-            "/company-types",
-            "/companys"
-            
-        /*    ,
-            "/aplicacoes/**",
-            "/job/**"*/
-            // other public endpoints of your API may be appended to this array
-    };
-	
+            "/register"
+            //"/company-types/**",
+            //"/companys/**",
+            //"/document-regions/**",
+            //"/person-types/**"
+
+			/*
+			 * , "/aplicacoes/**", "/job/**"
+			 */
+			// other public endpoints of your API may be appended to this array
+	};
+
 	/** The encoder. */
 	private PasswordEncoder encoder;
 
@@ -50,32 +53,33 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService customUserDetailsService;
 
-	
-	/* (non-Javadoc)
-	 * @see org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter#configure(org.springframework.security.config.annotation.web.builders.HttpSecurity)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.springframework.security.config.annotation.web.configuration.
+	 * WebSecurityConfigurerAdapter#configure(org.springframework.security.config.
+	 * annotation.web.builders.HttpSecurity)
 	 */
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.csrf().disable().authorizeRequests()
-		 	.antMatchers(AUTH_WHITELIST).permitAll()
-		 	.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-			.anyRequest().authenticated()
-			.and()
-			
-	/*		// filtra requisições de login
-			.addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
-	                UsernamePasswordAuthenticationFilter.class)
-			*/
-			// filtra outras requisições para verificar a presença do JWT no header
-			.addFilterBefore(new JWTAuthenticationFilter(),
-	                UsernamePasswordAuthenticationFilter.class);
+		httpSecurity.csrf().disable().authorizeRequests().antMatchers(AUTH_WHITELIST).permitAll()
+				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest().authenticated().and()
+
+				/*
+				 * // filtra requisições de login .addFilterBefore(new JWTLoginFilter("/login",
+				 * authenticationManager()), UsernamePasswordAuthenticationFilter.class)
+				 */
+				// filtra outras requisições para verificar a presença do JWT no header
+				.addFilterBefore(new JWTAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
-	
+
 	/**
 	 * Configure global.
 	 *
-	 * @param auth the auth
-	 * @throws Exception the exception
+	 * @param auth
+	 *            the auth
+	 * @throws Exception
+	 *             the exception
 	 */
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {

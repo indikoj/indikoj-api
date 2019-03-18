@@ -1,6 +1,5 @@
 package br.com.uaijug.indikoj.web.dto;
 
-import br.com.uaijug.indikoj.model.domain.Company;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,5 +17,5 @@ public class JobOpportunityDTO {
 	@Getter @Setter private String name;
 	@Getter @Setter private String code;
 	@Getter @Setter private String shortDescription;
-	@Getter @Setter private Company company;
+	@Getter @Setter private Long companyId;
 }

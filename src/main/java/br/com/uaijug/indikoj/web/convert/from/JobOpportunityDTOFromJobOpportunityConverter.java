@@ -17,7 +17,7 @@ public class JobOpportunityDTOFromJobOpportunityConverter implements Converter<J
 		jobOpportunity.setName(source.getName());
 		jobOpportunity.setCode(source.getCode());
 		jobOpportunity.setShortDescription(source.getShortDescription());
-		jobOpportunity.setCompany(source.getCompany());
+		jobOpportunity.setCompanyId(source.getCompany().getId());
 		
 		return jobOpportunity;
 	}

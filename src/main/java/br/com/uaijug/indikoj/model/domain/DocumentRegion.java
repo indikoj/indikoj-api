@@ -1,5 +1,8 @@
 package br.com.uaijug.indikoj.model.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum DocumentRegion {
 	STATE_AC("AC", "Acre"),
 	STATE_AL("AL", "Alagoas"),
@@ -43,7 +46,16 @@ public enum DocumentRegion {
 		return state;
 	}
 	
-	public String getStateByAcronym(String acronym) {
+	public static DocumentRegion get(String states) {
+		for (DocumentRegion region : DocumentRegion.values()) {
+			if (states.equals(region.name())) {
+				return region;
+			}
+		}
+		return null;
+	}
+	
+	public static String getStateByAcronym(String acronym) {
 		for (DocumentRegion region : DocumentRegion.values()) {
 			if (region.getAcronym().equals(acronym)) {
 				return region.getState();
@@ -51,5 +63,12 @@ public enum DocumentRegion {
 		}
 		return null;
 	}
-		
+	
+	public static List<DocumentRegion> getDocumentRegions() {
+		List<DocumentRegion> regions = new ArrayList<>();
+  		for (DocumentRegion region : DocumentRegion.values()) {
+  			regions.add(region);
+		}
+		return regions;
+	}
 }

@@ -19,7 +19,7 @@ public class CandidateDTOFromCandidateConverter implements Converter<Candidate, 
 		candidate.setMobile(source.getMobile());
 		candidate.setCurriculum(source.getCurriculum());
 		candidate.setShortCompetences(source.getShortCompetences());
-		candidate.setCompany(source.getCompany());
+		candidate.setCompanyId(source.getCompany().getId());
 		
 		return candidate;
 	}

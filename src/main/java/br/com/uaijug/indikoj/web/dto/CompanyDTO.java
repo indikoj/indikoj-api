@@ -21,7 +21,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@ToString(callSuper = true, of = { "name", "email", "address", "companyType", "birthDate", "personType", "phone",
+@ToString(callSuper = true, of = { "name", "email", "address", "companyTypeId", "birthDate", "personType", "phone",
 		"mobile", "documentRegion", "documentId", "socialId", "sex", "nationality" })
 @Data
 public class CompanyDTO implements Serializable {
@@ -45,7 +45,7 @@ public class CompanyDTO implements Serializable {
 
 	@Getter
 	@Setter
-	private CompanyTypeDTO companyType;
+	private Long companyTypeId;
 
 	@Getter
 	@Setter

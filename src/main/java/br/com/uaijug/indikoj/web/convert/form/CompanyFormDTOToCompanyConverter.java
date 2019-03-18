@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 import br.com.uaijug.indikoj.model.domain.Company;
 import br.com.uaijug.indikoj.model.domain.CompanyType;
+import br.com.uaijug.indikoj.model.domain.DocumentRegion;
+import br.com.uaijug.indikoj.model.domain.PersonType;
 import br.com.uaijug.indikoj.model.service.CompanyTypeService;
 import br.com.uaijug.indikoj.web.dto.form.CompanyFormDTO;
 
@@ -31,11 +33,11 @@ public class CompanyFormDTOToCompanyConverter implements Converter<CompanyFormDT
 				target.setCompanyType(companyType.get());
 			}
 		}
-
-		target.setPersonType(source.getPersonType());
+		
+		target.setPersonType(PersonType.get(source.getPersonType()));
 		target.setPhone(source.getPhone());
 		target.setMobile(source.getMobile());
-		target.setDocumentRegion(source.getDocumentRegion());
+		target.setDocumentRegion(DocumentRegion.get(source.getDocumentRegion()));
 		target.setSocialId(source.getSocialId());
 		target.setNationality(source.getNationality());
 
